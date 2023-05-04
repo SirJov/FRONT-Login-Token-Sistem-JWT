@@ -1,9 +1,11 @@
 header {
+  position: fixed;
+  width: 100vw;
   background-color: rgb(155, 166, 167);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 20px;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
 .spanLogo {
   color: rgb(66, 117, 117);
   position: absolute;
-  left: 155px;
+  left: 175px;
   top: 45px;
   font-size: 60px;
   text-shadow: 5px 5px 4px rgb(28, 41, 32);
@@ -40,9 +42,13 @@ h1 {
 
 .btnEntrar {
   font-size: 25px;
-  background-color: aliceblue;
+  background-color: rgb(155, 166, 167);
   height: 80px;
   width: 130px;
   border: none;
   border-radius: 5px;
+}
+
+.btnEntrar:hover {
+  background-color: rgb(139, 150, 139);
 }
