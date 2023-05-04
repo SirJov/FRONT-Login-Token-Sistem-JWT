@@ -5,6 +5,8 @@
   font-family: "Consolas", Arial, Helvetica, sans-serif;
 }
 body {
-  height: 200vh;
   background-color: rgb(190, 190, 190);
+}
+::-webkit-scrollbar {
+  width: 0px;
 }
