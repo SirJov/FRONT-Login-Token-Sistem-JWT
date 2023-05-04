@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Consolas", Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: radial-gradient(
+   
+  rgb(202, 202, 202),
+  rgb(224, 224, 224)
+  );
+  height: 100vh;
+}
