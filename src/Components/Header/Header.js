@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.css";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
+
 export default function Header() {
   return (
     <header>
@@ -13,9 +15,7 @@ export default function Header() {
         <div className="boxEfect2"></div>
         <div className="boxEfect3"></div>
       </div>
-      <div>
-        <button className="btnEntrar">ENTRAR</button>
-      </div>
+      <ProfileHeader />
     </header>
   );
 }
