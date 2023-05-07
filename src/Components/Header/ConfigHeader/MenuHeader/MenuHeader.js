@@ -27,9 +27,7 @@ export default function MenuHeader() {
             </Link>
           </li>
           <li>
-            <Link className="linkNav" to="/Register">
-              <p>Desconectar</p>
-            </Link>
+            <p>Desconectar</p>
           </li>
         </ul>
       </div>
