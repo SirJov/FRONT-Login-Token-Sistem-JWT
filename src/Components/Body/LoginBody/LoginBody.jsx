@@ -1,12 +1,11 @@
-import "./HomeBody.css";
+import "./LoginBody.css";
 
-export default function HomeBody() {
+export default function LoguinBody() {
   return (
-    <div className="HomeBody">
+    <div className="LoginBody">
       <p>SSSSSSSSSSSSSSSS</p>
       <p>SSSSSSSSSSSSSSSS</p>
       <p>SSSSSSSSSSSSSSSS</p>
-      
     </div>
   );
 }

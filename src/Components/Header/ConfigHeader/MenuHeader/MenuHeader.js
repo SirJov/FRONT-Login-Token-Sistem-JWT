@@ -12,11 +12,25 @@ export default function MenuHeader() {
         <div></div>
         <ul className="navHeader">
           <li>
-            <Link></Link>
+            <Link className="linkNav" to="/">
+              <p>Home</p>
+            </Link>
           </li>
-          <li>Feed</li>
-          <li>Perfil</li>
-          <li>Desconectar</li>
+          <li>
+            <Link className="linkNav" to="/Feed">
+              <p>Feed</p>
+            </Link>
+          </li>
+          <li>
+            <Link className="linkNav" to="/Login">
+              <p>Perfil</p>
+            </Link>
+          </li>
+          <li>
+            <Link className="linkNav" to="/Register">
+              <p>Desconectar</p>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

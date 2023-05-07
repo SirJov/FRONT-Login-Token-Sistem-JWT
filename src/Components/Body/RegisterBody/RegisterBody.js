@@ -3,8 +3,10 @@ import "./RegisterBody.css";
 
 export default function RegisterBody() {
   return (
-    <section>
-      <></>
-    </section>
+    <div className="RegisterBody">
+      <p>SSSSSSSSSSSSSSSS</p>
+      <p>SSSSSSSSSSSSSSSS</p>
+      <p>SSSSSSSSSSSSSSSS</p>
+    </div>
   );
 }

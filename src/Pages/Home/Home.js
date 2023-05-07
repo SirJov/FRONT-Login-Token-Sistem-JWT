@@ -5,8 +5,8 @@ import HomeBody from "../../Components/Body/HomeBody/HomeBody";
 
 export default function Home() {
   return (
-    <section>
+    <>
       <HomeBody />
-    </section>
+    </>
   );
 }

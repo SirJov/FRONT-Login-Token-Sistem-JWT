@@ -10,13 +10,13 @@ import "./BodyAplication.css";
 
 export default function BodyAplication() {
   return (
-    <div className="BodyAplication">
+    <section className="BodyAplication">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Feed" element={<Private />} />
       </Routes>
-    </div>
+    </section>
   );
 }
