@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./LoginBody.css";
@@ -9,26 +9,25 @@ export default function LoguinBody() {
 
   const [dataLogin, setDataLogin] = useState();
 
-  const UserLogin = (event) => {
-    setUser(event.target.value);
-    setador();
-  };
-  const PasswordLogin = (event) => {
-    setPassword(event.target.value);
-    setador();
-  };
-
-  function setador() {
+  useEffect(() => {
     setDataLogin({
       email: User,
       password: Password,
     });
-  }
+  }, [User, Password]);
+
+  const UserLogin = (event) => {
+    setUser(event.target.value);
+  };
+  const PasswordLogin = (event) => {
+    setPassword(event.target.value);
+  };
 
   const ReqLoguin = (event) => {
     event.preventDefault();
-
-    console.log(dataLogin);
+    const data = dataLogin;
+    //aqui o post para logar
+    console.log(data);
   };
 
   return (
@@ -37,14 +36,14 @@ export default function LoguinBody() {
         <input
           type="text"
           placeholder="Email"
-          required
           onChange={UserLogin}
+          required
         ></input>
         <input
           type="text"
           placeholder="Sua Senha"
-          required
           onChange={PasswordLogin}
+          required
         ></input>
         <button onClick={ReqLoguin}>Entrar</button>
       </form>
