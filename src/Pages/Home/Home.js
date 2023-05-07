@@ -1,10 +1,12 @@
 import React from "react";
 import "./Home.css";
 
+import HomeBody from "../../Components/Body/HomeBody/HomeBody";
+
 export default function Home() {
   return (
     <section>
-      <div></div>
+      <HomeBody />
     </section>
   );
 }

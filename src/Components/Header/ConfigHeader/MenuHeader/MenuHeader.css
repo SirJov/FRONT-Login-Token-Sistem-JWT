@@ -1,0 +1,43 @@
+.iconMenuHeader {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.iconMenuHeader:hover {
+  cursor: pointer;
+}
+.iconMenuHeader:hover .navHeader {
+  display: initial;
+}
+.iconMenuHeader div {
+  background-color: rgb(57, 77, 65);
+  height: 8px;
+  width: 50px;
+}
+
+.navHeader {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 150px;
+  right: 10px;
+  top: 64px;
+  position: fixed;
+}
+.navHeader:hover {
+  display: initial;
+}
+.navHeader li {
+  font-size: 20px;
+  padding: 10px 4px;
+  background-color: rgb(102, 131, 119);
+  border: 1px solid rgb(66, 104, 85);
+}
+.navHeader li:hover {
+  display: inherit;
+  background-color: rgb(105, 143, 127);
+}

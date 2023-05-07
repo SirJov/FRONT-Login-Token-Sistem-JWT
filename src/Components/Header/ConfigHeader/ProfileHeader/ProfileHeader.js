@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./ProfileHeader";
+import "./ProfileHeader.css";
 
 export default function ProfileHeader() {
   return (
     <div className="ProfileHeader">
       <img />
-      <p></p>
+      <p>Eu mesmo</p>
     </div>
   );
 }

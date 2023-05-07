@@ -1,6 +1,7 @@
 import React from "react";
 
-import "./MenuHeader";
+import "./MenuHeader.css";
+import { Link } from "react-router-dom";
 
 export default function MenuHeader() {
   return (
@@ -9,11 +10,15 @@ export default function MenuHeader() {
         <div></div>
         <div></div>
         <div></div>
+        <ul className="navHeader">
+          <li>
+            <Link></Link>
+          </li>
+          <li>Feed</li>
+          <li>Perfil</li>
+          <li>Desconectar</li>
+        </ul>
       </div>
-      <ul className="navHeader">
-        <li>Perfil</li>
-        <li>Desconectar</li>
-      </ul>
     </nav>
   );
 }
