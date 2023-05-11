@@ -6,7 +6,6 @@ import "./LoginBody.css";
 export default function LoguinBody() {
   const [User, setUser] = useState();
   const [Password, setPassword] = useState();
-
   const [dataLogin, setDataLogin] = useState();
 
   useEffect(() => {

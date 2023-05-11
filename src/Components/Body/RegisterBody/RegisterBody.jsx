@@ -5,10 +5,10 @@ export default function RegisterBody() {
   const [User, setUser] = useState();
   const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
-
   const [dataRegister, setDataRegister] = useState();
 
   const UserLogin = (event) => {
+    
     setUser(event.target.value);
   };
   const EmailLogin = (event) => {
