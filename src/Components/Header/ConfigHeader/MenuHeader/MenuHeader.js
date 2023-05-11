@@ -22,7 +22,7 @@ export default function MenuHeader() {
             </Link>
           </li>
           <li>
-            <Link className="linkNav" to="/Login">
+            <Link className="linkNav" to="/Profile">
               <p>Perfil</p>
             </Link>
           </li>

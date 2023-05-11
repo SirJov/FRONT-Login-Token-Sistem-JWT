@@ -8,7 +8,7 @@ import MenuHeader from "./MenuHeader/MenuHeader";
 
 export default function ConfigHeader() {
   const teste = true;
-  if (teste) {
+  if (!teste) {
     return (
       <div className="ConfigHeader">
         <ProfileHeader />

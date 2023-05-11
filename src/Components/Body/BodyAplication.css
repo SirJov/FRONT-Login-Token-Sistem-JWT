@@ -1,7 +1,6 @@
 .BodyAplication {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 95px;
+  padding-top: 220px;
   height: 97vh;
 }

@@ -3,6 +3,7 @@
   border: 1px solid rgb(156, 167, 168);
   border-radius: 5px;
   padding: 50px 20px;
+  height: fit-content;
 }
 .LoginBody form {
   display: flex;
