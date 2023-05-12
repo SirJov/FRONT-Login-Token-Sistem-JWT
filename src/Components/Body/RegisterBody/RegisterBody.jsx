@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import "./RegisterBody.css";
+import axios from "axios";
 
 export default function RegisterBody() {
   const [User, setUser] = useState();
   const [Email, setEmail] = useState();
   const [Password, setPassword] = useState();
+
   const [dataRegister, setDataRegister] = useState();
 
   const UserLogin = (event) => {
-    
     setUser(event.target.value);
   };
   const EmailLogin = (event) => {
@@ -26,11 +27,21 @@ export default function RegisterBody() {
     });
   }, [User, Email, Password]);
 
-  const ReqRegister = (event) => {
+  const ReqRegister = async (event) => {
     event.preventDefault();
-    const data = dataRegister;
+
+    await axios
+      .post(
+        "https://api-login-token-sistem-jwt.vercel.app/RegisterUser",
+        dataRegister
+      )
+      .then((response) => {
+        return console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     //Post para Register
-    console.log(data);
   };
 
   return (

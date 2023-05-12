@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./LoginBody.css";
+import axios from "axios";
 
 export default function LoguinBody() {
   const [User, setUser] = useState();
   const [Password, setPassword] = useState();
+
   const [dataLogin, setDataLogin] = useState();
 
   useEffect(() => {
@@ -22,11 +24,16 @@ export default function LoguinBody() {
     setPassword(event.target.value);
   };
 
-  const ReqLoguin = (event) => {
+  const ReqLoguin = async (event) => {
     event.preventDefault();
     const data = dataLogin;
-    //aqui o post para logar
-    console.log(data);
+
+    await axios
+      .get("",data)
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
