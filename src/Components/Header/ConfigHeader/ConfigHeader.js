@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import "./ConfigHeader.css";
@@ -6,9 +6,12 @@ import "./ConfigHeader.css";
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import MenuHeader from "./MenuHeader/MenuHeader";
 
+import ContextToken from "../../../Context/ContextToken";
+
 export default function ConfigHeader() {
-  const teste = true;
-  if (!teste) {
+  const [TokenUser] = useContext(ContextToken);
+
+  if (TokenUser) {
     return (
       <div className="ConfigHeader">
         <ProfileHeader />

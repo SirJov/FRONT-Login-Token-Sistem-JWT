@@ -1,14 +1,22 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect, useContext } from "react";
+
+import ContextToken from "../../../Context/ContextToken";
+import ContextUser from "../../../Context/ContextUser";
 
 import "./LoginBody.css";
-import axios from "axios";
 
 export default function LoguinBody() {
   const [User, setUser] = useState();
   const [Password, setPassword] = useState();
 
   const [dataLogin, setDataLogin] = useState();
+
+  const [TokenUser, SetTokenUser] = useContext(ContextToken);
+  const [UserData, SetUserData] = useContext(ContextUser);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setDataLogin({
@@ -33,7 +41,15 @@ export default function LoguinBody() {
         dataLogin
       )
       .then((response) => {
-        return console.log(response.data);
+        localStorage.setItem("userData", JSON.stringify(response.data[1]));
+
+        localStorage.setItem("token", response.data[0].token);
+        SetTokenUser(response.data[0].token);
+
+        let userString = localStorage.getItem("userData");
+        let userObj = JSON.parse(userString);
+
+        return navigate(`/`);
       })
       .catch((error) => {
         console.log(error);

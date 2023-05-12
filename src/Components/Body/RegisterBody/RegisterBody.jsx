@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RegisterBody.css";
 import axios from "axios";
+import ContextToken from "../../../Context/ContextToken";
 
 export default function RegisterBody() {
   const [User, setUser] = useState();
@@ -8,6 +10,9 @@ export default function RegisterBody() {
   const [Password, setPassword] = useState();
 
   const [dataRegister, setDataRegister] = useState();
+  const [TokenUser, SetTokenUser] = useContext(ContextToken);
+
+  const navigate = useNavigate();
 
   const UserLogin = (event) => {
     setUser(event.target.value);
@@ -36,7 +41,15 @@ export default function RegisterBody() {
         dataRegister
       )
       .then((response) => {
-        return console.log(response.data);
+        localStorage.setItem("userData", JSON.stringify(response.data[1]));
+
+        localStorage.setItem("token", response.data[0].token);
+        SetTokenUser(response.data[0].token);
+
+        let userString = localStorage.getItem("userData");
+        let userObj = JSON.parse(userString);
+
+        return navigate(`/`);
       })
       .catch((error) => {
         console.log(error);
