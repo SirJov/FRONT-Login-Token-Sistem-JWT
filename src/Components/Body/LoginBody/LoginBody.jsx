@@ -26,11 +26,15 @@ export default function LoguinBody() {
 
   const ReqLoguin = async (event) => {
     event.preventDefault();
-    const data = dataLogin;
 
     await axios
-      .get("",data)
-      .then()
+      .post(
+        "https://api-login-token-sistem-jwt.vercel.app/UserLogin",
+        dataLogin
+      )
+      .then((response) => {
+        return console.log(response.data);
+      })
       .catch((error) => {
         console.log(error);
       });
