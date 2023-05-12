@@ -41,15 +41,19 @@ export default function LoguinBody() {
         dataLogin
       )
       .then((response) => {
-        localStorage.setItem("userData", JSON.stringify(response.data[1]));
+        if (response.data[1]) {
+          localStorage.setItem("userData", JSON.stringify(response.data[1]));
 
-        localStorage.setItem("token", response.data[0].token);
-        SetTokenUser(response.data[0].token);
+          localStorage.setItem("token", response.data[0].token);
 
-        let userString = localStorage.getItem("userData");
-        let userObj = JSON.parse(userString);
+          SetTokenUser(response.data[0].token);
 
-        return navigate(`/`);
+          //let userString = localStorage.getItem("userData");
+          //let userObj = JSON.parse(userString);
+
+          return navigate(`/`);
+        }
+        return console.log("dados incorretos");
       })
       .catch((error) => {
         console.log(error);

@@ -6,6 +6,7 @@ import Header from "./Components/Header/Header";
 import BodyAplication from "./Components/Body/BodyAplication";
 import Footer from "./Components/Footer/Footer";
 import ContextToken from "./Context/ContextToken";
+import ContextUser from "./Context/ContextUser";
 
 function App() {
   const [TokenUser, SetTokenUser] = useState();
@@ -21,13 +22,13 @@ function App() {
 
   return (
     <section className="App">
-      <ContextToken.Provider
-        value={([TokenUser, SetTokenUser], [UserData, SetUserData])}
-      >
-        <BrowserRouter>
-          <Header />
-          <BodyAplication />
-        </BrowserRouter>
+      <ContextToken.Provider value={[TokenUser, SetTokenUser]}>
+        <ContextUser.Provider value={[UserData, SetUserData]}>
+          <BrowserRouter>
+            <Header />
+            <BodyAplication />
+          </BrowserRouter>
+        </ContextUser.Provider>
       </ContextToken.Provider>
       <Footer />
     </section>
