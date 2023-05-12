@@ -3,7 +3,7 @@ import "./LogoHeader.css";
 
 export default function LogoHeader() {
   return (
-    <div>
+    <div className="LogoHeader">
       <h1>
         LITTLE<span className="spanLogo">face</span>
       </h1>

@@ -7,16 +7,3 @@ header {
   align-items: center;
   padding: 0px 20px;
 }
-
-h1 {
-  font-size: 80px;
-  text-shadow: 3px 3px 5px rgb(28, 41, 32);
-}
-.spanLogo {
-  color: rgb(80, 211, 167);
-  position: absolute;
-  left: 175px;
-  top: 45px;
-  font-size: 60px;
-  text-shadow: 5px 5px 4px rgb(28, 41, 32);
-}
