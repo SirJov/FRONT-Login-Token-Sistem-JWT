@@ -5,8 +5,10 @@
   justify-content: center;
 }
 
-.ProfileHeader img{
-  
+.ProfileHeader img {
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgb(111, 133, 115);
 }
 
 .ProfileHeader p {
