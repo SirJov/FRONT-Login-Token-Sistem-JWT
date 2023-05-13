@@ -1,15 +1,14 @@
 .ProfileHeader {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
 
-.ProfileHeader img {
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  background-color: blue;
+.ProfileHeader img{
+  
 }
+
 .ProfileHeader p {
+  margin-right: 60px;
 }
