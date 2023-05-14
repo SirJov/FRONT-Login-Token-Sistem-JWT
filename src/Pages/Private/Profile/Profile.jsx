@@ -1,11 +1,11 @@
 import "./Profile.css";
 
+import ProfileBody from "../../../Components/Body/PrivateRoutes/ProfileBody/ProfileBody";
+
 export default function Profile() {
   return (
     <div className="Profile">
-      <p>SSSSSSSSSSSSSSSS</p>
-      <p>SSSSSSSSSSSSSSSS</p>
-      <p>SSSSSSSSSSSSSSSS</p>
+      <ProfileBody />
     </div>
   );
 }

@@ -17,6 +17,7 @@
   background-color: rgb(57, 77, 65);
   height: 8px;
   width: 50px;
+  box-shadow: 3px 3px 3px rgb(88, 88, 88);
 }
 
 .navHeader {

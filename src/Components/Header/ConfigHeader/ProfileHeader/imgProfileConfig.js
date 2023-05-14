@@ -18,6 +18,28 @@ import user_15 from "../../../../assets/imgUserProfile/user_15.png";
 import user_16 from "../../../../assets/imgUserProfile/user_16.png";
 import user_17 from "../../../../assets/imgUserProfile/user_17.png";
 
+const ArrayImgs = [
+  { img: user_default, nameImg: "user_default" },
+  { img: user_0, nameImg: "user_0" },
+  { img: user_1, nameImg: "user_1" },
+  { img: user_2, nameImg: "user_2" },
+  { img: user_3, nameImg: "user_3" },
+  { img: user_4, nameImg: "user_4" },
+  { img: user_5, nameImg: "user_5" },
+  { img: user_6, nameImg: "user_6" },
+  { img: user_7, nameImg: "user_7" },
+  { img: user_8, nameImg: "user_8" },
+  { img: user_9, nameImg: "user_9" },
+  { img: user_10, nameImg: "user_10" },
+  { img: user_11, nameImg: "user_11" },
+  { img: user_12, nameImg: "user_12" },
+  { img: user_13, nameImg: "user_13" },
+  { img: user_14, nameImg: "user_14" },
+  { img: user_15, nameImg: "user_15" },
+  { img: user_16, nameImg: "user_16" },
+  { img: user_17, nameImg: "user_17" },
+];
+
 const objImg = {
   user_default: user_default,
   user_0: user_0,
@@ -44,4 +66,4 @@ function SelectImgProfile(i) {
   return objImg[i];
 }
 
-export default SelectImgProfile;
+export { SelectImgProfile, ArrayImgs };

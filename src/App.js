@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import BodyAplication from "./Components/Body/BodyAplication";
-import Footer from "./Components/Footer/Footer";
 import ContextToken from "./Context/ContextToken";
 import ContextUser from "./Context/ContextUser";
 
@@ -30,7 +29,6 @@ function App() {
           </BrowserRouter>
         </ContextUser.Provider>
       </ContextToken.Provider>
-      <Footer />
     </section>
   );
 }

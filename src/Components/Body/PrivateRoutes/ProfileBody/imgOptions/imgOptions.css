@@ -1,0 +1,28 @@
+.ImgOptions {
+  padding: 0px 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.ImgOptions img {
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid rgb(111, 133, 115);
+  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+}
+.ImgOptionsIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 500px;
+}
+.ImgOptionsImput button {
+  border: none;
+  padding: 10px 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+}
