@@ -12,6 +12,13 @@ function App() {
   const [UserData, SetUserData] = useState();
 
   useEffect(() => {
+    let userString = localStorage.getItem("userData");
+    const userObj = JSON.parse(userString);
+
+    if (userObj) {
+      SetUserData(userObj);
+    }
+
     const token = localStorage.getItem("token");
     if (token) {
       SetTokenUser(token);

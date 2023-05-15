@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -10,11 +10,23 @@ import OtherProfiles from "../../Pages/Private/OtherProfiles/OtherProfiles";
 
 import "./BodyAplication.css";
 
+import ContextUser from "../../Context/ContextUser";
+
 export default function BodyAplication() {
   const Token = localStorage.getItem("token");
 
   let userString = localStorage.getItem("userData");
   let userObj = JSON.parse(userString);
+
+  const [UserData, SetUserData] = useContext(ContextUser);
+
+  function ifUser() {
+    if (UserData) {
+      return UserData.user;
+    } else {
+      return userObj.user;
+    }
+  }
 
   if (!Token) {
     return (
@@ -32,9 +44,12 @@ export default function BodyAplication() {
       <section className="BodyAplication">
         <Routes>
           <Route path={`/`} element={<Home />} />
-          <Route path={`/${userObj.user}/Feed`} element={<Feed />} />
-          <Route path={`/${userObj.user}/Profile`} element={<Profile />} />
-          <Route path="/OtherProfiles" element={<OtherProfiles />} />
+          <Route path={`/${ifUser()}/Feed`} element={<Feed />} />
+          <Route path={`/${ifUser()}/Profile`} element={<Profile />} />
+          <Route
+            path={`/${ifUser()}/OtherProfiles`}
+            element={<OtherProfiles />}
+          />
         </Routes>
       </section>
     );

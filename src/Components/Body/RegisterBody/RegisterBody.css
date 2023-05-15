@@ -13,6 +13,8 @@
   margin-bottom: 40px;
 }
 .RegisterBody button {
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
   margin-top: 40px;
   border: none;
   padding: 10px 10px;
@@ -20,7 +22,9 @@
   border-radius: 5px;
 }
 .RegisterBody button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
   cursor: pointer;
+  font-size: 19.8px;
 }
 .RegisterBody input {
   padding: 0px 5px;

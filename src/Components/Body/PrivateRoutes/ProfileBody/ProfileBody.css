@@ -10,6 +10,29 @@
   min-height: 80vh;
 }
 .IconPerfilAndName {
-  background-color: bisque;
+  background-color: rgb(155, 166, 167);
   min-height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 20px;
+}
+
+.IconPerfilAndName img {
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid rgb(111, 133, 115);
+  box-shadow: 5px 5px 4px rgb(88, 88, 88);
+}
+
+.IconPerfilAndName input {
+  height: 80px;
+  width: 60%;
+  font-size: 55px;
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid rgb(111, 133, 115);
+  box-shadow: 5px 5px 4px rgb(88, 88, 88);
 }

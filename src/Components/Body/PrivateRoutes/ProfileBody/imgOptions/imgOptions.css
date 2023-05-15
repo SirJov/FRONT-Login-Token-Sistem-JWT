@@ -8,8 +8,14 @@
 .ImgOptions img {
   height: 70px;
   border-radius: 50%;
+  border: 2px solid rgb(111, 133, 115);
+  box-shadow: 5px 5px 2px rgb(88, 88, 88);
+  transition: 0.09s ease-in-out;
+}
+.ImgOptions img:hover {
+  box-shadow: 3px 3px 2px rgb(54, 54, 54);
   border: 3px solid rgb(111, 133, 115);
-  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+  transition: 0.1s ease-in-out;
 }
 .ImgOptionsIcon {
   display: flex;
@@ -20,9 +26,19 @@
   width: 500px;
 }
 .ImgOptionsImput button {
+  height: 60px;
+  width: 130px;
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
   border: none;
   padding: 10px 10px;
   font-size: 30px;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgb(88, 88, 88);
+}
+
+.ImgOptionsImput button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 29.7px;
 }

@@ -5,7 +5,7 @@
   border-radius: 5px;
   padding: 50px 20px;
   height: fit-content;
-}
+} 
 .LoginBody form {
   display: flex;
   flex-direction: column;
@@ -13,13 +13,17 @@
   margin-bottom: 40px;
 }
 .LoginBody button {
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
   border: none;
   padding: 10px 10px;
   font-size: 20px;
   border-radius: 5px;
 }
 .LoginBody button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
   cursor: pointer;
+  font-size: 19.8px;
 }
 .LoginBody input {
   padding: 0px 5px;

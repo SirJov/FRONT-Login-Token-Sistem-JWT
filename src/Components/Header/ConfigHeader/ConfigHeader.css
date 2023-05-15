@@ -3,14 +3,18 @@
   gap: 10px;
 }
 .btnEntrar {
-  font-size: 25px;
-  background-color: rgb(155, 166, 167);
-  height: 80px;
-  width: 130px;
+  height: 60px;
+  width: 125px;
+  background-color: rgb(230, 245, 233);
   border: none;
+  padding: 10px 10px;
+  font-size: 30px;
   border-radius: 5px;
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
 }
 
 .btnEntrar:hover {
-  background-color: rgb(139, 150, 139);
+  box-shadow: 3px 3px 2px rgb(62, 63, 63);
+  cursor: pointer;
+  font-size: 29.7px;
 }

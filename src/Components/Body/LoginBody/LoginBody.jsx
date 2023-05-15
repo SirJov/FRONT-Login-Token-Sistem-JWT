@@ -43,7 +43,7 @@ export default function LoguinBody() {
       .then((response) => {
         if (response.data[1]) {
           localStorage.setItem("userData", JSON.stringify(response.data[1]));
-
+          SetUserData(response.data[1]);
           localStorage.setItem("token", response.data[0].token);
 
           SetTokenUser(response.data[0].token);
