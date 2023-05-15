@@ -1,11 +1,9 @@
-import "./Feed.css";
+import FeedBody from "../../../Components/Body/PrivateRoutes/FeedBody/FeedBody";
 
 export default function Feed() {
   return (
-    <div className="Feed">
-      <p>SSSSSSSSSSSSSSSS</p>
-      <p>SSSSSSSSSSSSSSSS</p>
-      <p>SSSSSSSSSSSSSSSS</p>
-    </div>
+    <>
+      <FeedBody />
+    </>
   );
 }

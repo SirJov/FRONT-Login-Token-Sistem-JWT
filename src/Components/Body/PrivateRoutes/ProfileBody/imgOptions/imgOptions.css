@@ -16,6 +16,7 @@
   box-shadow: 3px 3px 2px rgb(54, 54, 54);
   border: 3px solid rgb(111, 133, 115);
   transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
 .ImgOptionsIcon {
   display: flex;
