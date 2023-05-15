@@ -22,11 +22,19 @@ export default function ImgOptions({
   const userObj = JSON.parse(userString);
 
   useEffect(() => {
-    setDataPut({
-      email: userObj.email,
-      user: newUserName,
-      imgProfile: imgSelected,
-    });
+    if (!newUserName || newUserName === "") {
+      setDataPut({
+        email: userObj.email,
+        user: userObj.user,
+        imgProfile: imgSelected,
+      });
+    } else {
+      setDataPut({
+        email: userObj.email,
+        user: newUserName,
+        imgProfile: imgSelected,
+      });
+    }
   }, [imgSelected, newUserName]);
 
   //useEffect(() => {
