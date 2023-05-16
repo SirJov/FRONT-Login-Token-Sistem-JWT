@@ -1,11 +1,17 @@
 .SectionPostFeed {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 5px 40px;
+  justify-content: center;
+  width: 100vw;
   position: fixed;
   top: 105px;
-  left: 340px;
+  left: 0px;
+  z-index: 0;
+}
+.FuncionalitComponentsPostFeed {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2px 0px;
   width: 822px;
   background-image: linear-gradient(
     rgb(173, 175, 173),
@@ -22,7 +28,7 @@
   -webkit-text-stroke: 0.4px rgb(127, 187, 142);
 }
 .SectionPostFeed textarea {
-    background-color: rgb(185, 209, 200);
+  background-color: rgb(185, 209, 200);
   margin-right: 20px;
   outline: none;
   border-radius: 5px;
@@ -45,4 +51,24 @@
   box-shadow: 3px 3px 2px rgb(78, 85, 82);
   cursor: pointer;
   font-size: 24.7px;
+}
+.BtnTopRefrech {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.BtnTopRefrech button {
+  height: 25px;
+  width: 40px;
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+}
+.BtnTopRefrech button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 18px;
 }
