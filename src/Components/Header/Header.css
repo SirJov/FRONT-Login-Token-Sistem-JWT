@@ -1,7 +1,8 @@
 header {
   position: fixed;
   width: 100vw;
-  background-color: rgb(155, 166, 167);
+  background-color: rgb(173, 175, 173);
+  box-shadow: 3px 3px 3px rgb(88, 88, 88);
   display: flex;
   justify-content: space-between;
   align-items: center;

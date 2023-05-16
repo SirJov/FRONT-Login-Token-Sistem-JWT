@@ -6,19 +6,34 @@ import { useContext, useEffect, useState } from "react";
 import ContextUser from "../../../../Context/ContextUser";
 
 export default function MenuHeader() {
-  const [TokenUser, SetTokenUser] = useContext(ContextToken);
-  const [UserData, SetUserData] = useContext(ContextUser);
+  const [SetTokenUser] = useContext(ContextToken);
+  const [UserData] = useContext(ContextUser);
 
-  const [userRouterName, SetUserRouterName] = useState();
+  const [buttonClicked, SetButtonClicked] = useState(false);
+  const [classBtn, setCassBtn] = useState({});
+
+  useEffect(() => {
+    if (buttonClicked === false) {
+      setCassBtn({
+        iconMenuHeader: "iconMenuHeader",
+        navHeader: "navHeader",
+      });
+    } else {
+      setCassBtn({
+        iconMenuHeader: "iconMenuHeaderClicked",
+        navHeader: "navHeaderVisible",
+      });
+    }
+  }, [buttonClicked]);
 
   const navigate = useNavigate();
 
   let userString = localStorage.getItem("userData");
   let userObj = JSON.parse(userString);
 
-  useEffect(() => {
-    SetUserRouterName(UserData.user);
-  });
+  const alterState = () => {
+    SetButtonClicked(!buttonClicked);
+  };
 
   function ifUser() {
     if (UserData) {
@@ -37,11 +52,11 @@ export default function MenuHeader() {
 
   return (
     <nav>
-      <div className="iconMenuHeader">
+      <div className={classBtn.iconMenuHeader} onClick={alterState}>
         <div></div>
         <div></div>
         <div></div>
-        <ul className="navHeader">
+        <ul className={classBtn.navHeader}>
           <li>
             <Link className="linkNav" to={`/`}>
               <p>Home</p>

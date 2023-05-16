@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./ProfileBody.css";
 import ImgOptions from "./imgOptions/imgOptions";
+import ContextUser from "../../../../Context/ContextUser";
 
 const {
   ArrayImgs,
@@ -8,18 +9,21 @@ const {
 
 export default function ProfileBody() {
   const [imgUserState, SetImgUserState] = useState(ArrayImgs[0].img);
-  const [userName, SetUserName] = useState();
-
+  const [UserData] = useContext(ContextUser);
+  const [namePlaceholder, setNamePlaceholder] = useState("");
   const [imgSelected, SetImgSelected] = useState("user_default");
 
   const [newUserName, SetNewUserName] = useState("");
 
   useEffect(() => {
-    let userString = localStorage.getItem("userData");
-    const userObj = JSON.parse(userString);
-    SetUserName(userObj.user);
-  }, []);
-
+    if (UserData) {
+      return setNamePlaceholder(UserData.user);
+    } else {
+      let userString = localStorage.getItem("userData");
+      let userObj = JSON.parse(userString);
+      return setNamePlaceholder(userObj.user);
+    }
+  }, [UserData]);
   useEffect(() => {
     const imgSel = meetImg(imgSelected);
     SetImgUserState(imgSel);
@@ -37,7 +41,7 @@ export default function ProfileBody() {
     <div className="ProfileBody">
       <div className="IconPerfilAndName">
         <img src={imgUserState} />
-        <input placeholder={userName} onChange={getValueInput} />
+        <input placeholder={namePlaceholder} onChange={getValueInput} />
       </div>
       <ImgOptions
         imgSelected={imgSelected}

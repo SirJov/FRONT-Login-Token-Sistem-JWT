@@ -6,18 +6,42 @@
   gap: 5px;
   justify-content: center;
   align-items: center;
+  transition: 0.09s ease-in-out;
+}
+.iconMenuHeaderClicked {
+  margin-top: 18px;
+  margin-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.09s ease-in-out;
 }
 .iconMenuHeader:hover {
   cursor: pointer;
 }
-.iconMenuHeader:hover .navHeader {
-  display: initial;
+.iconMenuHeader:hover div {
+  box-shadow: 2.3px 2.3px 2.3px rgb(88, 88, 88);
+  background-color: rgb(55, 71, 60);
+  transition: 0.09s ease-in-out;
 }
+
 .iconMenuHeader div {
+  border-radius: 0px 0px 5px 5px;
+  transition: 0.09s ease-in-out;
   background-color: rgb(57, 77, 65);
   height: 8px;
   width: 50px;
   box-shadow: 3px 3px 3px rgb(88, 88, 88);
+}
+.iconMenuHeaderClicked div {
+  transition: 0.09s ease-in-out;
+  border-radius: 5px 5px 0px 0px;
+  background-color: rgb(34, 46, 39);
+  height: 8px;
+  width: 50px;
+  box-shadow: 1px 1px 1px rgb(88, 88, 88);
 }
 
 .navHeader {
@@ -30,15 +54,34 @@
   top: 64px;
   position: fixed;
 }
-.navHeader:hover {
-  display: initial;
+.navHeaderVisible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  background-color: rgb(173, 175, 173);
+  margin: 0;
+  list-style: none;
+  width: 160px;
+  height: 210px;
+  right: 5px;
+  top: 94px;
+  position: fixed;
+  border: 2px solid rgba(0, 0, 0, 0.411);
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
 }
-.navHeader li {
+.navHeaderVisible li {
   font-size: 20px;
-
-  background-color: rgb(102, 131, 119);
-  border: 1px solid rgb(66, 104, 85);
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+  width: 140px;
+  margin: 0px auto;
+  padding: 0px 10px;
 }
+
 .navHeader li:hover {
   display: inherit;
   background-color: rgb(105, 143, 127);
@@ -47,6 +90,6 @@
   color: black;
   text-decoration: none;
 }
-.navHeader p {
-  padding: 10px 4px;
+.navHeaderVisible p {
+  padding: 8px 0px;
 }
