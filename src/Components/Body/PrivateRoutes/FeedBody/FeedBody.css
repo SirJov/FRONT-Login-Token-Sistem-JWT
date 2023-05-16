@@ -5,7 +5,9 @@
   min-width: 100vw;
 }
 .FeedBodyColum {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 175px;
   margin-bottom: 20px;
   width: 800px;
   border-radius: 5px;
