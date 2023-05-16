@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import ContextUser from "../../../../Context/ContextUser";
 
 export default function MenuHeader() {
-  const [SetTokenUser] = useContext(ContextToken);
+  const [tokenUser, SetTokenUser] = useContext(ContextToken);
   const [UserData] = useContext(ContextUser);
 
   const [buttonClicked, SetButtonClicked] = useState(false);

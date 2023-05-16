@@ -82,9 +82,10 @@
   padding: 0px 10px;
 }
 
-.navHeader li:hover {
-  display: inherit;
-  background-color: rgb(105, 143, 127);
+.navHeaderVisible li:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 19.7px;
 }
 .linkNav {
   color: black;
