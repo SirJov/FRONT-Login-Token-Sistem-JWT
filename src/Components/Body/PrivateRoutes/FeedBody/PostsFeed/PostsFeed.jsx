@@ -26,7 +26,7 @@ export default function PostsFeed() {
         </div>
         <div>
           <div className="AreaLikes">
-            <button>LIKE</button> <p>{iten.likesNumber}</p>
+            <p>👌</p> <p>{iten.likesNumber}</p>
           </div>
         </div>
         <ComentsPost dataComments={dataComments} />

@@ -1,14 +1,13 @@
 .FeedBody {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
   min-width: 100vw;
 }
 .FeedBodyColum {
   padding: 10px;
   display: flex;
   flex-direction: column-reverse;
-  gap: 10px;
+  gap: 30px;
   margin-top: 80px;
   margin-bottom: 20px;
   width: 800px;

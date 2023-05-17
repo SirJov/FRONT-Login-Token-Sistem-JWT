@@ -1,6 +1,5 @@
 .CardsPostFeed {
-  background-image: linear-gradient(rgb(230, 245, 233), rgb(173, 173, 173));
-  background-color: rgb(230, 245, 233);
+  background-image: linear-gradient(rgb(183, 194, 185), rgb(173, 173, 173));
   border-radius: 5px;
 }
 .headerPostFeed {
@@ -18,7 +17,18 @@
 .headerPostFeed img {
   height: 40px;
   margin-right: 15px;
+  border-radius: 50%;
+  border: 3px solid rgb(111, 133, 115);
+  box-shadow: 3px 3px 3px rgb(88, 88, 88);
 }
+.headerPostFeed p {
+  color: rgb(13, 77, 24);
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-text-stroke: 0.2px rgb(132, 179, 168);
+  text-shadow: 2px 2px 3px rgb(88, 88, 88);
+}
+
 .headerPostFeed button {
   margin-right: 10px;
 }
@@ -30,6 +40,7 @@
   border: none;
   font-weight: bold;
   font-size: 20px;
+  transition: 0.2s ease-in-out;
 }
 .headerPostFeed button:hover {
   box-shadow: 2px 2px 2px rgb(78, 85, 82);
@@ -46,6 +57,25 @@
   padding: 5px;
   border-bottom: 1px solid black;
 }
+.AreaLikes p:first-of-type {
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(77, 88, 80);
+  transition: 0.09s ease-in-out;
+}
+.AreaLikes p:first-of-type:hover {
+  font-size: 28px;
+  text-shadow: 2px 2px 2px rgb(77, 88, 80);
+  cursor: pointer;
+}
+.AreaLikes p:last-of-type {
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgb(77, 88, 80);
+}
 .bodyPostFeed {
   padding: 10px 20px;
+  text-shadow: 1px 1px 2px rgb(77, 88, 80);
+  font-size: 18px;
 }

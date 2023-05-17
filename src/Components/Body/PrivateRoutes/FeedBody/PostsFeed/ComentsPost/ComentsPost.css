@@ -1,6 +1,5 @@
 .ComentsPost {
-
-  background-color: rgb(191, 218, 191);
+  background-color: rgb(183, 201, 183);
   box-shadow: 3px 3px 3px rgb(78, 85, 82);
   margin-left: 20px;
   margin-right: 20px;
@@ -11,7 +10,7 @@
   background-image: linear-gradient(
     54deg,
     rgba(78, 85, 82, 0.192),
-    rgb(206, 226, 206)
+    rgb(183, 201, 183)
   );
 
   width: 500px;
@@ -34,9 +33,18 @@
 }
 
 .headerCommentsPost img {
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px rgb(88, 88, 88);
   height: 20px;
   margin-right: 8px;
 }
+.headerCommentsPost p {
+  color: rgb(13, 77, 24);
+  font-weight: bold;
+  -webkit-text-stroke: 0.1px rgb(149, 233, 215);
+  text-shadow: 1px 1px 2px rgb(88, 88, 88);
+}
+
 .headerCommentsPost button {
   width: 25px;
   border-radius: 3px;
