@@ -38,9 +38,11 @@ export default function MenuHeader() {
   function ifUser() {
     if (UserData) {
       return UserData.user;
-    } else {
+    }
+    if (userObj) {
       return userObj.user;
     }
+    return navigate("/");
   }
 
   const Logout = () => {

@@ -3,6 +3,8 @@ import "./imgOptions.css";
 import axios from "axios";
 
 import ContextUser from "../../../../../Context/ContextUser";
+import ContextToken from "../../../../../Context/ContextToken";
+
 import { useNavigate } from "react-router-dom";
 
 const {
@@ -15,6 +17,7 @@ export default function ImgOptions({
   newUserName,
 }) {
   const [UserData, SetUserData] = useContext(ContextUser);
+  const [tokenUser, SetTokenUser] = useContext(ContextToken);
   const [dataPut, setDataPut] = useState({});
   const navigate = useNavigate();
 
@@ -59,7 +62,16 @@ export default function ImgOptions({
         }
       })
       .catch((error) => {
-        console.log(error);
+        const ErrorToken = error.response.data[0].error.name;
+
+        if (ErrorToken == "JsonWebTokenError") {
+          localStorage.removeItem("userData");
+          localStorage.removeItem("token");
+          SetTokenUser(undefined);
+          return navigate("/");
+        } else {
+          return console.log(error);
+        }
       });
   };
 

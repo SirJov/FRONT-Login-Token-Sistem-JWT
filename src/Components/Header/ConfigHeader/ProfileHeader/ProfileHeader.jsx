@@ -21,8 +21,10 @@ export default function ProfileHeader() {
   }, []);
 
   useEffect(() => {
-    setUserNameProfile(userObj.user);
-    setImgProfileState(userObj.imgProfile);
+    if (userObj) {
+      setUserNameProfile(userObj.user);
+      setImgProfileState(userObj.imgProfile);
+    }
   }, [UserData]);
 
   return (

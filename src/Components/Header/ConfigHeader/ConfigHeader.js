@@ -7,17 +7,21 @@ import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import MenuHeader from "./MenuHeader/MenuHeader";
 
 import ContextToken from "../../../Context/ContextToken";
+import ContextUser from "../../../Context/ContextUser";
 
 export default function ConfigHeader() {
   const [TokenUser] = useContext(ContextToken);
+  const [UserData] = useContext(ContextUser);
 
   if (TokenUser) {
-    return (
-      <div className="ConfigHeader">
-        <ProfileHeader />
-        <MenuHeader />
-      </div>
-    );
+    if (UserData) {
+      return (
+        <div className="ConfigHeader">
+          <ProfileHeader />
+          <MenuHeader />
+        </div>
+      );
+    }
   }
   return (
     <div>

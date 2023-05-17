@@ -1,4 +1,6 @@
 .CardsPostFeed {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(198, 214, 201);
   background-image: linear-gradient(rgb(183, 194, 185), rgb(173, 173, 173));
   border-radius: 5px;
 }
@@ -32,6 +34,7 @@
 .headerPostFeed button {
   margin-right: 10px;
 }
+
 .headerPostFeed button {
   width: 25px;
   border-radius: 3px;
