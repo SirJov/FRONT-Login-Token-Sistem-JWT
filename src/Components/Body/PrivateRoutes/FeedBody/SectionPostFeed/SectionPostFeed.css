@@ -29,7 +29,7 @@
 }
 .SectionPostFeed textarea {
   background-color: rgb(185, 209, 200);
-  margin-right: 20px;
+  padding: 5px;
   outline: none;
   border-radius: 5px;
   max-height: 50px;
@@ -37,6 +37,7 @@
   min-height: 50px;
   min-width: 300px;
 }
+
 .SectionPostFeed button {
   height: 45px;
   width: 110px;

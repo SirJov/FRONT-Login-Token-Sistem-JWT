@@ -5,13 +5,14 @@
   min-width: 100vw;
 }
 .FeedBodyColum {
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 10px;
   margin-top: 80px;
   margin-bottom: 20px;
   width: 800px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(78, 85, 82);
   background-color: rgb(173, 175, 173);
-  z-index: -2;
 }

@@ -1,0 +1,57 @@
+.ComentsPost {
+
+  background-color: rgb(191, 218, 191);
+  box-shadow: 3px 3px 3px rgb(78, 85, 82);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.CardCommentsPost {
+  background-image: linear-gradient(
+    54deg,
+    rgba(78, 85, 82, 0.192),
+    rgb(206, 226, 206)
+  );
+
+  width: 500px;
+  border-radius: 5px;
+  padding: 3px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(187, 197, 190);
+  margin-bottom: 5px;
+  min-width: 60%;
+}
+
+.headerCommentsPost {
+  display: flex;
+  justify-content: space-between;
+}
+.headerCommentsPost div {
+  display: flex;
+}
+
+.headerCommentsPost img {
+  height: 20px;
+  margin-right: 8px;
+}
+.headerCommentsPost button {
+  width: 25px;
+  border-radius: 3px;
+  background-color: rgb(255, 199, 199);
+  box-shadow: 3px 3px 3px rgb(78, 85, 82);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.headerCommentsPost button:hover {
+  box-shadow: 2px 2px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  background-color: rgb(255, 150, 150);
+  font-size: 19.8px;
+}
+.bodyComment {
+  margin-left: 35px;
+}
