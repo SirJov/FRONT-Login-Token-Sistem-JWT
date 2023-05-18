@@ -4,6 +4,7 @@ import ContextToken from "../../../../../Context/ContextToken";
 import ContextFeed from "../../../../../Context/ContextFeed";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import InputsFeed from "./InputsFeed/InputsFeed";
 
 export default function SectionPostFeed() {
   const [tokenUser, SetTokenUser] = useContext(ContextToken);
@@ -38,8 +39,7 @@ export default function SectionPostFeed() {
     <div className="SectionPostFeed">
       <div className="FuncionalitComponentsPostFeed">
         <p>Nova Postagem</p>
-        <textarea />
-        <button>Postar</button>
+        <InputsFeed />
         <div className="BtnTopRefrech">
           <button>
             <a href="#Topo">⇧</a>
