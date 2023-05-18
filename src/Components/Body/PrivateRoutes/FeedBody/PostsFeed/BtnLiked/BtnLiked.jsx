@@ -30,6 +30,7 @@ export default function BtnLiked({ Numberlikes, iten_id }) {
       _idPost: iten_id,
       _idAuthorLikedt: userObj.id,
     };
+
     const data = await axios
       .put(url, body, params)
       .then((response) => {
@@ -48,7 +49,7 @@ export default function BtnLiked({ Numberlikes, iten_id }) {
     return data;
   }
 
-  if (Exist === 0) {
+  if (Exist > -1) {
     return (
       <p
         onClick={() => {
@@ -59,7 +60,8 @@ export default function BtnLiked({ Numberlikes, iten_id }) {
         👌
       </p>
     );
-  } else {
+  }
+  if (Exist === -1) {
     return (
       <p
         onClick={() => {

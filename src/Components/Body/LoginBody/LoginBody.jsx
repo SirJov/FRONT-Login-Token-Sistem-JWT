@@ -57,9 +57,17 @@ export default function LoguinBody() {
         console.log(error);
       });
   };
-
+  const styled = (
+    <style>{`
+    .btnEntrar {
+      animation: EfectOpacite 1s ease-in;
+      opacity: 30%;
+    }    
+    `}</style>
+  );
   return (
     <div className="LoginBody">
+      {styled}
       <form>
         <input
           type="text"

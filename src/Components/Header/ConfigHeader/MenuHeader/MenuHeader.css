@@ -79,7 +79,7 @@
   width: 140px;
   margin: 0px auto;
   padding: 0px 10px;
-  animation: EfectOpacit 0.6s ease-in;
+  animation: EfectOpacit 0.6s reverse;
 }
 
 .navHeaderVisible li:hover {

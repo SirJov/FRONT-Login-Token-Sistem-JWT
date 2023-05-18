@@ -56,9 +56,17 @@ export default function RegisterBody() {
       });
     //Post para Register
   };
-
+  const styled = (
+    <style>{`
+    .btnEntrar {
+      animation: EfectOpacite 1s ease-in;
+      opacity: 30%;
+    }    
+    `}</style>
+  );
   return (
     <div className="RegisterBody">
+      {styled}
       <form>
         <input
           type="text"

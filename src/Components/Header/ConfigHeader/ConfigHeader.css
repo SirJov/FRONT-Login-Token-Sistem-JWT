@@ -18,3 +18,13 @@
   cursor: pointer;
   font-size: 29.7px;
 }
+
+@keyframes EfectOpacite {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 30%;
+  }
+}
