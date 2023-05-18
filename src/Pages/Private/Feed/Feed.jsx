@@ -4,11 +4,13 @@ import ContextFeed from "../../../Context/ContextFeed";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ContextUser from "../../../Context/ContextUser";
+import ContextError from "../../../Context/ContextError";
 
 export default function Feed() {
   const navigate = useNavigate();
   const [tokenUser, SetTokenUser] = useContext(ContextUser);
   const [feedData, SetFeedData] = useState(Array);
+  const [ErrorData, SetUErrorData] = useContext(ContextError);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -25,6 +27,7 @@ export default function Feed() {
           const ErrorToken = error.response.data[0].error.name;
 
           if (ErrorToken == "JsonWebTokenError" || "TokenExpiredError") {
+            SetUErrorData(ErrorToken);
             localStorage.removeItem("userData");
             localStorage.removeItem("token");
             SetTokenUser(undefined);

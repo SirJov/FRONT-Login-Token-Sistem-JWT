@@ -1,0 +1,73 @@
+.DisplayMsg {
+  background-color: rgb(173, 175, 173);
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgb(88, 88, 88);
+  padding: 5px;
+  width: 300px;
+  top: 140px;
+  left: -20px;
+  position: absolute;
+  animation: BoxMsg 1s ease-in-out;
+}
+.DisplayMsg2 {
+  background-color: rgb(173, 175, 173);
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgb(88, 88, 88);
+  padding: 5px;
+  width: 300px;
+  top: 140px;
+  left: -310px;
+  position: absolute;
+  animation: BoxMsg 1s reverse;
+}
+.DisplayMsgIdle {
+  display: none;
+}
+
+.backGround {
+  background-color: rgb(226, 226, 226);
+  border-radius: 4px;
+  margin-left: 20px;
+}
+.headerAlert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 3px;
+  margin-bottom: 5px;
+}
+.headerAlert img {
+  height: 20px;
+  animation: imgBrightness 0.7s infinite;
+}
+.headerAlert h4 {
+  margin-left: 17px;
+  width: 280px;
+}
+.bodyAlert p {
+  word-break: break-all;
+  padding: 5px;
+  text-align: center;
+}
+
+@keyframes BoxMsg {
+  0% {
+    left: -310px;
+  }
+
+  100% {
+    left: -20px;
+  }
+}
+
+@keyframes imgBrightness {
+  0% {
+    filter: brightness(70%);
+  }
+  50% {
+    filter: brightness(130%);
+  }
+  100% {
+    filter: brightness(70%);
+  }
+}

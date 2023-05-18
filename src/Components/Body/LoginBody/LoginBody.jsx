@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 
 import ContextToken from "../../../Context/ContextToken";
 import ContextUser from "../../../Context/ContextUser";
+import ContextError from "../../../Context/ContextError";
 
 import "./LoginBody.css";
 
@@ -15,6 +16,7 @@ export default function LoguinBody() {
 
   const [TokenUser, SetTokenUser] = useContext(ContextToken);
   const [UserData, SetUserData] = useContext(ContextUser);
+  const [ErrorData, SetUErrorData] = useContext(ContextError);
 
   const navigate = useNavigate();
 
@@ -54,7 +56,11 @@ export default function LoguinBody() {
         return console.log("dados incorretos");
       })
       .catch((error) => {
-        console.log(error);
+        if (error.message) {
+          SetUErrorData(error.message);
+        } else {
+          return console.log(error);
+        }
       });
   };
   const styled = (

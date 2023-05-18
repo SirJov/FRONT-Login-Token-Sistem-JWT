@@ -2,6 +2,7 @@ import axios from "axios";
 import "./SectionPostFeed.css";
 import ContextToken from "../../../../../Context/ContextToken";
 import ContextFeed from "../../../../../Context/ContextFeed";
+import ContextError from "../../../../../Context/ContextError";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import InputsFeed from "./InputsFeed/InputsFeed";
@@ -9,6 +10,7 @@ import InputsFeed from "./InputsFeed/InputsFeed";
 export default function SectionPostFeed() {
   const [tokenUser, SetTokenUser] = useContext(ContextToken);
   const [feedData, SetFeedData] = useContext(ContextFeed);
+  const [ErrorData, SetUErrorData] = useContext(ContextError);
   const navigate = useNavigate();
 
   const GetFeed = async () => {
@@ -26,10 +28,13 @@ export default function SectionPostFeed() {
         const ErrorToken = error.response.data[0].error.name;
 
         if (ErrorToken == "JsonWebTokenError" || "TokenExpiredError") {
+          SetUErrorData(ErrorData);
           localStorage.removeItem("userData");
           localStorage.removeItem("token");
           SetTokenUser(undefined);
           return navigate("/");
+        } else {
+          return error;
         }
       });
     return data;

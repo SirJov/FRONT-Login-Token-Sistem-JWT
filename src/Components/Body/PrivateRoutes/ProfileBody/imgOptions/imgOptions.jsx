@@ -4,6 +4,7 @@ import axios from "axios";
 
 import ContextUser from "../../../../../Context/ContextUser";
 import ContextToken from "../../../../../Context/ContextToken";
+import ContextError from "../../../../../Context/ContextError";
 
 import { useNavigate } from "react-router-dom";
 
@@ -18,6 +19,7 @@ export default function ImgOptions({
 }) {
   const [UserData, SetUserData] = useContext(ContextUser);
   const [tokenUser, SetTokenUser] = useContext(ContextToken);
+  const [ErrorData, SetUErrorData] = useContext(ContextError);
   const [dataPut, setDataPut] = useState({});
   const navigate = useNavigate();
 
@@ -25,7 +27,7 @@ export default function ImgOptions({
   const userObj = JSON.parse(userString);
 
   useEffect(() => {
-    if (!newUserName || newUserName === "") {
+    if (!newUserName || newUserName === " ") {
       setDataPut({
         email: userObj.email,
         user: userObj.user,
@@ -65,12 +67,13 @@ export default function ImgOptions({
         const ErrorToken = error.response.data[0].error.name;
 
         if (ErrorToken == "JsonWebTokenError" || "TokenExpiredError") {
+          SetUErrorData(ErrorData);
           localStorage.removeItem("userData");
           localStorage.removeItem("token");
           SetTokenUser(undefined);
           return navigate("/");
         } else {
-          return console.log(error);
+          return console.log({ error: error, msg: "put imgOptions" });
         }
       });
   };
