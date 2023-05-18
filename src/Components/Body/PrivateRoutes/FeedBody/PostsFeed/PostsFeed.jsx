@@ -5,6 +5,8 @@ import "./PostsFeed.css";
 import { SelectImgProfile } from "../../../../Header/ConfigHeader/ProfileHeader/imgProfileConfig";
 import ComentsPost from "./ComentsPost/ComentsPost";
 import BtnDelete from "./ComentsPost/BtnDelete/BtnDelete";
+import ImputComents from "./ImputComents/ImputComents";
+
 export default function PostsFeed() {
   const [feedData, SetFeedData] = useContext(ContextFeed);
   const [UserData, SetUserData] = useContext(ContextUser);
@@ -27,7 +29,9 @@ export default function PostsFeed() {
         </div>
         <div>
           <div className="AreaLikes">
-            <p>👌</p> <p>{Numberlikes.length}</p>
+            <p>👌</p>
+            <p>{Numberlikes.length}</p>
+            <ImputComents _id={iten._id} />
           </div>
         </div>
         <ComentsPost dataComments={dataComments} id_postFeed={iten._id} />
