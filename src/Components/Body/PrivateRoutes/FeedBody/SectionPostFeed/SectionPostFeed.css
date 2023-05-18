@@ -73,3 +73,8 @@
   cursor: pointer;
   font-size: 18px;
 }
+.BtnTopRefrech a {
+  padding: 0px 12px;
+  text-decoration: none;
+  color: black;
+}
