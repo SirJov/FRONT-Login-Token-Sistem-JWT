@@ -52,6 +52,7 @@ export default function ImputComents({ _id }) {
           return navigate("/");
         }
       });
+    setTextArea("");
     return data;
   };
 
@@ -62,6 +63,7 @@ export default function ImputComents({ _id }) {
           setTextArea(ev.target.value);
         }}
         placeholder="Deixe um comentario"
+        value={textArea}
       ></textarea>
       <button onClick={InsertComment}>Comentar</button>
     </div>

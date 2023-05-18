@@ -54,16 +54,17 @@ export default function InputsFeed() {
           return navigate("/");
         }
       });
+    setTextArea("");
     return data;
   };
 
-  
   return (
     <div className="InputsFeed">
       <textarea
         onChange={(ev) => {
           setTextArea(ev.target.value);
         }}
+        value={textArea}
       />
       <button onClick={InsertPostFeed}>Postar</button>
     </div>
