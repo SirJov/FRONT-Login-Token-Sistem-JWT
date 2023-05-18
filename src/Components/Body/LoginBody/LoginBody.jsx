@@ -53,7 +53,7 @@ export default function LoguinBody() {
 
           return navigate(`/`);
         }
-        return console.log("dados incorretos");
+        return SetUErrorData("Dados incorretos");
       })
       .catch((error) => {
         if (error.message) {
