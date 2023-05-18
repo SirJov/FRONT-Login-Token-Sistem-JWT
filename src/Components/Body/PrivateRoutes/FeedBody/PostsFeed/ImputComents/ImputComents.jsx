@@ -14,7 +14,7 @@ export default function ImputComents({ _id }) {
   const [Data, setData] = useState();
   const [textArea, setTextArea] = useState();
   const navigate = useNavigate();
- 
+
   useEffect(() => {
     const dataPost = {
       _id: _id,
@@ -56,7 +56,7 @@ export default function ImputComents({ _id }) {
   };
 
   return (
-    <div>
+    <div className="ImputComents">
       <textarea
         onChange={(ev) => {
           setTextArea(ev.target.value);

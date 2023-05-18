@@ -30,7 +30,7 @@ export default function PostsFeed() {
         </div>
         <div>
           <div className="AreaLikes">
-            <BtnLiked />
+            <BtnLiked Numberlikes={Numberlikes} iten_id={iten._id} />
             <p>{Numberlikes.length}</p>
             <ImputComents _id={iten._id} />
           </div>

@@ -1,54 +1,48 @@
-.ComentsPost {
-  background-color: rgb(183, 201, 183);
-  box-shadow: 3px 3px 3px rgb(78, 85, 82);
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 3px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.btnIsLiked {
+  text-shadow: 0px 0px 10px rgb(0, 255, 68);
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  animation: EfectNotLiked 0.6s ease-in;
+  transition: 0.05s ease-in-out;
 }
-.CardCommentsPost {
-  background-image: linear-gradient(
-    54deg,
-    rgba(78, 85, 82, 0.192),
-    rgb(183, 201, 183)
-  );
-
-  width: 500px;
-  border-radius: 5px;
-  padding: 3px;
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(187, 197, 190);
-
-  min-width: 60%;
+.btnIsLiked:hover {
+  font-size: 28px;
+  text-shadow: 0px 0px 15px rgb(0, 255, 68);
+  cursor: pointer;
 }
 
-.headerCommentsPost {
-  display: flex;
-  justify-content: space-between;
+.btnNotLiked {
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  transform: rotate(-220deg);
+  animation: EfectLiked 0.6s ease-in-out;
+  transition: 0.05s ease-in-out;
 }
-.headerCommentsPost div {
-  display: flex;
-}
-
-.headerCommentsPost img {
-  border-radius: 50%;
-  box-shadow: 3px 3px 3px rgb(88, 88, 88);
-  height: 20px;
-  margin-right: 8px;
-}
-.headerCommentsPost p {
-  color: rgb(9, 34, 13);
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgb(88, 88, 88);
+.btnNotLiked:hover {
+  font-size: 21px;
+  text-shadow: 0px 0px 5px rgb(77, 88, 80);
+  cursor: pointer;
 }
 
+@keyframes EfectLiked {
+  0% {
+    transform: rotate(0deg);
+  }
 
-.bodyComment {
-  margin-left: 35px;
-  margin-bottom: 8px;
+  100% {
+    transform: rotate(-220deg);
+  }
+}
+@keyframes EfectNotLiked {
+  0% {
+    transform: rotate(-220deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }

@@ -3,3 +3,29 @@
   align-items: center;
   gap: 15px;
 }
+.InputsFeed textarea {
+  background-color: rgb(185, 209, 200);
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  max-height: 50px;
+  max-width: 300px;
+  min-height: 50px;
+  min-width: 300px;
+}
+
+.InputsFeed button {
+  height: 45px;
+  width: 110px;
+  background-color: rgb(230, 245, 233);
+  box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  border: none;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgb(88, 88, 88);
+}
+.InputsFeed button:hover {
+  box-shadow: 3px 3px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  font-size: 24.7px;
+}

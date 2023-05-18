@@ -44,19 +44,7 @@
   padding: 5px;
   border-bottom: 1px solid black;
 }
-.AreaLikes p:first-of-type {
-  font-size: 25px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  text-shadow: 2px 2px 2px rgb(77, 88, 80);
-  transition: 0.09s ease-in-out;
-}
-.AreaLikes p:first-of-type:hover {
-  font-size: 28px;
-  text-shadow: 2px 2px 2px rgb(77, 88, 80);
-  cursor: pointer;
-}
+
 .AreaLikes p:last-of-type {
   font-size: 20px;
   text-shadow: 2px 2px 2px rgb(77, 88, 80);

@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import ContextFeed from "../../../../../../Context/ContextFeed";
-import ContextUser from "../../../../../../Context/ContextUser";
 import ContextToken from "../../../../../../Context/ContextToken";
 
 import { useNavigate } from "react-router-dom";
@@ -8,7 +7,6 @@ import axios from "axios";
 import "./InputsFeed.css";
 
 export default function InputsFeed() {
-  const [UserData, SetUserData] = useContext(ContextUser);
   const [tokenUser, SetTokenUser] = useContext(ContextToken);
   const [feedData, SetFeedData] = useContext(ContextFeed);
 
@@ -17,10 +15,13 @@ export default function InputsFeed() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let userString = localStorage.getItem("userData");
+    let userObj = JSON.parse(userString);
+
     const dataPost = {
-      _idAuthor: UserData.id,
-      userAuthor: UserData.user,
-      imgAuthor: UserData.imgProfile,
+      _idAuthor: userObj.id,
+      userAuthor: userObj.user,
+      imgAuthor: userObj.imgProfile,
       body: textArea,
     };
     setData(dataPost);
@@ -56,6 +57,7 @@ export default function InputsFeed() {
     return data;
   };
 
+  
   return (
     <div className="InputsFeed">
       <textarea

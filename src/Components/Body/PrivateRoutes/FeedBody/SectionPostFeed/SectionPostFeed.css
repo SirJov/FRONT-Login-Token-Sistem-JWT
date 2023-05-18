@@ -27,32 +27,8 @@
   color: rgb(13, 77, 24);
   -webkit-text-stroke: 0.4px rgb(127, 187, 142);
 }
-.SectionPostFeed textarea {
-  background-color: rgb(185, 209, 200);
-  padding: 5px;
-  outline: none;
-  border-radius: 5px;
-  max-height: 50px;
-  max-width: 300px;
-  min-height: 50px;
-  min-width: 300px;
-}
 
-.SectionPostFeed button {
-  height: 45px;
-  width: 110px;
-  background-color: rgb(230, 245, 233);
-  box-shadow: 4px 4px 4px rgb(78, 85, 82);
-  border: none;
-  font-size: 25px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 4px rgb(88, 88, 88);
-}
-.SectionPostFeed button:hover {
-  box-shadow: 3px 3px 2px rgb(78, 85, 82);
-  cursor: pointer;
-  font-size: 24.7px;
-}
+
 .BtnTopRefrech {
   display: flex;
   flex-direction: column;
