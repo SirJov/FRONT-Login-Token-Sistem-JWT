@@ -4,13 +4,14 @@ import ContextUser from "../../../../../Context/ContextUser";
 import "./PostsFeed.css";
 import { SelectImgProfile } from "../../../../Header/ConfigHeader/ProfileHeader/imgProfileConfig";
 import ComentsPost from "./ComentsPost/ComentsPost";
-
+import BtnDelete from "./ComentsPost/BtnDelete/BtnDelete";
 export default function PostsFeed() {
   const [feedData, SetFeedData] = useContext(ContextFeed);
   const [UserData, SetUserData] = useContext(ContextUser);
 
   const ComponentCards = feedData.map((iten) => {
     const dataComments = iten.comments;
+    const Numberlikes = iten.likesNumber;
     return (
       <div key={iten._id} className="CardsPostFeed">
         <div className="headerPostFeed">
@@ -19,17 +20,17 @@ export default function PostsFeed() {
             <p className="teste">{iten.userAuthor}</p>
           </div>
 
-          <button>X</button>
+          <BtnDelete id_card={iten._id} id_user={iten._idAuthor} />
         </div>
         <div className="bodyPostFeed">
           <p>{iten.body}</p>
         </div>
         <div>
           <div className="AreaLikes">
-            <p>👌</p> <p>{iten.likesNumber}</p>
+            <p>👌</p> <p>{Numberlikes.length}</p>
           </div>
         </div>
-        <ComentsPost dataComments={dataComments} />
+        <ComentsPost dataComments={dataComments} id_postFeed={iten._id} />
       </div>
     );
   });

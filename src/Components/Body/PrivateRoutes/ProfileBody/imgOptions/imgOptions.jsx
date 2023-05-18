@@ -64,7 +64,7 @@ export default function ImgOptions({
       .catch((error) => {
         const ErrorToken = error.response.data[0].error.name;
 
-        if (ErrorToken == "JsonWebTokenError") {
+        if (ErrorToken == "JsonWebTokenError" || "TokenExpiredError") {
           localStorage.removeItem("userData");
           localStorage.removeItem("token");
           SetTokenUser(undefined);

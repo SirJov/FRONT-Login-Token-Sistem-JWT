@@ -3,8 +3,9 @@ import ContextFeed from "../../../../../../Context/ContextFeed";
 import ContextUser from "../../../../../../Context/ContextUser";
 import "./ComentsPost.css";
 import { SelectImgProfile } from "../../../../../Header/ConfigHeader/ProfileHeader/imgProfileConfig";
+import BtnDelete from "./BtnDelete/BtnDelete";
 
-export default function ComentsPost({ dataComments }) {
+export default function ComentsPost({ dataComments, id_postFeed }) {
   if (dataComments) {
     const ComentsPost = dataComments.map((i) => {
       return (
@@ -17,7 +18,12 @@ export default function ComentsPost({ dataComments }) {
               />
               <p className="userAuthorComment">{i.userAuthorComment}</p>
             </div>
-            <button>X</button>
+
+            <BtnDelete
+              id_card={i._id}
+              id_postFeed={id_postFeed}
+              id_user={i._idAuthorComment}
+            />
           </div>
           <div>
             <p className="bodyComment">{i.bodyComment}</p>

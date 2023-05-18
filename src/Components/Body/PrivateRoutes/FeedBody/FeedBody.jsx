@@ -9,11 +9,14 @@ export default function FeedBody() {
   const [feedData, SetFeedData] = useContext(ContextFeed);
 
   return (
-    <div className="FeedBody">
-      <SectionPostFeed />
-      <div className="FeedBodyColum">
-        <PostsFeed />
+    <>
+      <div id="Topo"></div>
+      <div className="FeedBody">
+        <SectionPostFeed />
+        <div className="FeedBodyColum">
+          <PostsFeed />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

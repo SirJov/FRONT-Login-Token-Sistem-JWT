@@ -40,7 +40,7 @@ export default function ProfileBody() {
   return (
     <div className="ProfileBody">
       <div className="IconPerfilAndName">
-        <img src={imgUserState} />
+        <img  src={imgUserState} />
         <input placeholder={namePlaceholder} onChange={getValueInput} />
       </div>
       <ImgOptions

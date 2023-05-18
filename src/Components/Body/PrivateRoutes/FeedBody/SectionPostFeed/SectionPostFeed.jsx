@@ -8,7 +8,9 @@ export default function SectionPostFeed() {
         <textarea />
         <button>Postar</button>
         <div className="BtnTopRefrech">
-          <button>⇧</button>
+          <button>
+            <a href="#Topo">⇧</a>
+          </button>
           <button>↻</button>
         </div>
       </div>

@@ -20,10 +20,11 @@ export default function Feed() {
         .then((response) => {
           return SetFeedData(response.data[1].obj);
         })
+
         .catch((error) => {
           const ErrorToken = error.response.data[0].error.name;
 
-          if (ErrorToken == "JsonWebTokenError") {
+          if (ErrorToken == "JsonWebTokenError" || "TokenExpiredError") {
             localStorage.removeItem("userData");
             localStorage.removeItem("token");
             SetTokenUser(undefined);
