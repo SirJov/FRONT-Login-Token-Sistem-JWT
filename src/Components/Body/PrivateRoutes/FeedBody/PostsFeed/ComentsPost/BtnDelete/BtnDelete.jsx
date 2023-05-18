@@ -63,7 +63,7 @@ export default function BtnDelete({ id_card, id_postFeed, id_user }) {
   const userObj = JSON.parse(userString);
 
   if (id_user === userObj.id) {
-    return <button onClick={DeleteCard}>X</button>;
+    return <button className="BtnDelete" onClick={DeleteCard}>X</button>;
   } else {
     return;
   }

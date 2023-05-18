@@ -1,0 +1,15 @@
+.BtnDelete {
+  width: 25px;
+  border-radius: 3px;
+  background-color: rgb(252, 223, 223);
+  box-shadow: 3px 3px 3px rgb(78, 85, 82);
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.BtnDelete:hover {
+  box-shadow: 2px 2px 2px rgb(78, 85, 82);
+  cursor: pointer;
+  background-color: rgb(255, 201, 201);
+  font-size: 19.8px;
+}
