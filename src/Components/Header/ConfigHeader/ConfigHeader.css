@@ -39,10 +39,24 @@
     border-radius: 5px;
     box-shadow: 4px 4px 4px rgb(78, 85, 82);
   }
-  
+
   .btnEntrar:hover {
     font-size: 19.7px;
   }
 }
 @media (max-width: 767px) {
+  .btnEntrar {
+    height: 40px;
+    width: 105px;
+    background-color: rgb(230, 245, 233);
+    border: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(78, 85, 82);
+  }
+
+  .btnEntrar:hover {
+    font-size: 19.7px;
+  }
 }

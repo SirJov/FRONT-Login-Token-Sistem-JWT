@@ -3,3 +3,13 @@
   justify-content: center;
   padding-top: 95px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .BodyAplication {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .BodyAplication {
+    padding-top: 70px;
+  }
+}
