@@ -23,8 +23,6 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(187, 197, 190);
-
-  min-width: 60%;
 }
 
 .headerCommentsPost {
@@ -50,4 +48,15 @@
 .bodyComment {
   margin-left: 35px;
   margin-bottom: 8px;
+}
+
+@media (min-width: 421px) and (max-width: 767px) {
+  .CardCommentsPost {
+    width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .CardCommentsPost {
+    width: 100%;
+  }
 }

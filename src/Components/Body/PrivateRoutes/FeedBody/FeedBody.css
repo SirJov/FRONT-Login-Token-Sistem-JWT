@@ -20,3 +20,18 @@
   position: absolute;
   top: 1px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .FeedBodyColum {
+    width: 95vw;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .FeedBodyColum {
+    width: 95vw;
+  }
+}
+@media (max-width: 420px) {
+  .FeedBodyColum {
+    width: 99vw;
+  }
+}

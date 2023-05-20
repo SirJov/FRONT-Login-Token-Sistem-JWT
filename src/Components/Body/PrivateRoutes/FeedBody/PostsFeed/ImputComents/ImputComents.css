@@ -31,3 +31,28 @@
   font-size: 9.9px;
   font-weight: bold;
 }
+
+@media (min-width: 421px) and (max-width: 767px) {
+  .ImputComents {
+    gap: 10px;
+    margin-left: 15vw;
+  }
+  .ImputComents textarea {
+    max-height: 30px;
+    max-width: 40vw;
+    min-height: 30px;
+    min-width: 40vw;
+  }
+}
+@media (max-width: 420px) {
+  .ImputComents {
+    gap: 10px;
+    margin-left: 0px;
+  }
+  .ImputComents textarea {
+    max-height: 30px;
+    max-width: 35vw;
+    min-height: 30px;
+    min-width: 35vw;
+  }
+}

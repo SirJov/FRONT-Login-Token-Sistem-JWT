@@ -67,7 +67,7 @@ export default function ImputComents({ _id }) {
         onChange={(ev) => {
           setTextArea(ev.target.value);
         }}
-        placeholder="Deixe um comentario"
+        placeholder="Add comentario"
         value={textArea}
       ></textarea>
       <button onClick={InsertComment}>Comentar</button>

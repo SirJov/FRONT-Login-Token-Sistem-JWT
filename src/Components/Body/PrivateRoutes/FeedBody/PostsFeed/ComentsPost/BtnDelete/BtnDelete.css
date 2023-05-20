@@ -13,3 +13,9 @@
   background-color: rgb(255, 201, 201);
   font-size: 19.8px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 421px) and (max-width: 767px) {
+}
+@media (max-width: 420px) {
+}

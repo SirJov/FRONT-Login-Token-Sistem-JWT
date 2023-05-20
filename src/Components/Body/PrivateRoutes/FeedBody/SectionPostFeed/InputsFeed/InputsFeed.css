@@ -29,3 +29,40 @@
   cursor: pointer;
   font-size: 24.7px;
 }
+
+@media (min-width: 421px) and (max-width: 767px) {
+  .InputsFeed textarea {
+    max-height: 50px;
+    max-width: 55vw;
+
+    min-height: 50px;
+    min-width: 55vw;
+  }
+
+  .InputsFeed button {
+    height: 45px;
+    width: 110px;
+    font-size: 25px;
+  }
+  .InputsFeed button:hover {
+    font-size: 24.7px;
+  }
+}
+@media (max-width: 420px) {
+  .InputsFeed textarea {
+    max-height: 40px;
+    max-width: 45vw;
+
+    min-height: 40px;
+    min-width: 45vw;
+  }
+
+  .InputsFeed button {
+    height: 35px;
+    width: 80px;
+    font-size: 18px;
+  }
+  .InputsFeed button:hover {
+    font-size: 17.7px;
+  }
+}

@@ -5,7 +5,7 @@
   position: fixed;
   top: 105px;
   left: 0px;
-  z-index: 0;
+  z-index: 1;
 }
 .FuncionalitComponentsPostFeed {
   display: flex;
@@ -27,7 +27,6 @@
   color: rgb(13, 77, 24);
   -webkit-text-stroke: 0.4px rgb(127, 187, 142);
 }
-
 
 .BtnTopRefrech {
   display: flex;
@@ -53,4 +52,50 @@
   padding: 0px 12px;
   text-decoration: none;
   color: black;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .SectionPostFeed {
+    top: 80px;
+  }
+  .FuncionalitComponentsPostFeed {
+    width: 100vw;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .SectionPostFeed {
+    top: 80px;
+  }
+  .FuncionalitComponentsPostFeed {
+    width: 100vw;
+  }
+  .SectionPostFeed p {
+    display: none;
+  }
+  .BtnTopRefrech button {
+    height: 25px;
+    width: 40px;
+    font-size: 18px;
+  }
+  .BtnTopRefrech button:hover {
+    font-size: 18px;
+  }
+}
+@media (max-width: 420px) {
+  .SectionPostFeed {
+    top: 80px;
+  }
+  .FuncionalitComponentsPostFeed {
+    width: 100vw;
+  }
+  .SectionPostFeed p {
+    display: none;
+  }
+  .BtnTopRefrech button {
+    height: 25px;
+    width: 40px;
+    font-size: 18px;
+  }
+  .BtnTopRefrech button:hover {
+    font-size: 18px;
+  }
 }
