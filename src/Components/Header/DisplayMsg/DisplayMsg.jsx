@@ -4,20 +4,30 @@ import ContextError from "../../../Context/ContextError";
 import "./DisplayMsg.css";
 
 export default function Header() {
-  const [ErrorData, SetUErrorData] = useContext(ContextError);
+  const [ErrorData, SetErrorData] = useContext(ContextError);
   const [clas, setClas] = useState("DisplayMsgIdle");
 
   function Mostrar() {
     setClas("DisplayMsg");
     setTimeout(() => {
-      setClas("DisplayMsg2");
-      setTimeout(() => {
-        setClas("DisplayMsgIdle");
-      }, 200);
-    }, 6000);
+      setClas("DisplayMsg1");
+    }, 4000);
+  }
+  function Esconder() {
+    setClas("DisplayMsg2");
+    setTimeout(() => {
+      setClas("DisplayMsgIdle");
+    }, 8000);
   }
 
-  useEffect(() => {}, [ErrorData]);
+  useEffect(() => {
+    console.log("eeee");
+    if (ErrorData === undefined) {
+      return;
+    } else {
+      setClas("DisplayMsg2");
+    }
+  }, [ErrorData]);
 
   return (
     <section className={clas}>

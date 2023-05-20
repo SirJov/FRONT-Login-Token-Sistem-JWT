@@ -9,3 +9,8 @@ header {
   padding: 0px 20px;
   z-index: 2;
 }
+@media (max-width: 420px) {
+  header {
+    padding: 0px 5px;
+  }
+}

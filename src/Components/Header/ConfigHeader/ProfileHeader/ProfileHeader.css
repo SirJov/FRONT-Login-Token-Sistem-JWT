@@ -19,3 +19,32 @@
   -webkit-text-stroke: 0.5px rgb(127, 187, 142);
   text-shadow: 3px 3px 3px rgb(88, 88, 88);
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ProfileHeader img {
+    height: 60px;
+  }
+  .ProfileHeader p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .ProfileHeader img {
+    height: 40px;
+  }
+  .ProfileHeader p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .ProfileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ProfileHeader img {
+    height: 30px;
+  }
+  .ProfileHeader p {
+    font-size: 20px;
+  }
+}

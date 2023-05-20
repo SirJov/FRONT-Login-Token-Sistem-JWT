@@ -7,7 +7,7 @@
   top: 140px;
   left: -20px;
   position: absolute;
-  animation: BoxMsg 1s ease-in-out;
+  animation: BoxMsg2 6s ease-in-out;
 }
 .DisplayMsg2 {
   background-color: rgb(173, 175, 173);
@@ -18,7 +18,7 @@
   top: 140px;
   left: -310px;
   position: absolute;
-  animation: BoxMsg 1s reverse;
+  animation: BoxMsg2 5s ease-in-out;
 }
 .DisplayMsgIdle {
   display: none;
@@ -57,6 +57,21 @@
 
   100% {
     left: -20px;
+  }
+}
+@keyframes BoxMsg2 {
+  0% {
+    left: -310px;
+  }
+  20% {
+    left: -20px;
+  }
+  80% {
+    left: -20px;
+  }
+
+  100% {
+    left: -310px;
   }
 }
 
