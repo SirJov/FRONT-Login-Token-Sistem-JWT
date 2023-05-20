@@ -45,8 +45,64 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .ImgOptionsIcon {
+    max-width: 500px;
+    background-color: aqua;
+  }
+  .ImgOptions img {
+    height: 50px;
+  }
+  .ImgOptionsImput button {
+    height: 50px;
+    width: 120px;
+    font-size: 25px;
+  }
+
+  .ImgOptionsImput button:hover {
+    font-size: 24.7px;
+  }
 }
 @media (min-width: 421px) and (max-width: 767px) {
+  .ImgOptions {
+    padding: 0px 10px;
+    flex-direction: column;
+  }
+  .ImgOptionsIcon {
+    width: auto;
+    background-color: aqua;
+  }
+  .ImgOptions img {
+    height: 40px;
+  }
+  .ImgOptionsImput button {
+    height: 40px;
+    width: 110px;
+    font-size: 20px;
+  }
+
+  .ImgOptionsImput button:hover {
+    font-size: 19.7px;
+  }
 }
 @media (max-width: 420px) {
+  .ImgOptions {
+    padding: 0px 10px;
+    flex-direction: column;
+  }
+  .ImgOptionsIcon {
+    width: auto;
+    background-color: aqua;
+  }
+  .ImgOptions img {
+    height: 40px;
+  }
+  .ImgOptionsImput button {
+    height: 40px;
+    width: 110px;
+    font-size: 20px;
+  }
+
+  .ImgOptionsImput button:hover {
+    font-size: 19.7px;
+  }
 }

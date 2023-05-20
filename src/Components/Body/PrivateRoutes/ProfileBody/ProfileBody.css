@@ -36,3 +36,53 @@
   border: 3px solid rgb(111, 133, 115);
   box-shadow: 5px 5px 4px rgb(88, 88, 88);
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ProfileBody {
+    width: 80vw;
+    min-height: 80vh;
+  }
+  .IconPerfilAndName img {
+    height: 150px;
+  }
+  .IconPerfilAndName input {
+    height: 70px;
+    width: 65%;
+    font-size: 45px;
+  }
+}
+@media (min-width: 421px) and (max-width: 767px) {
+  .ProfileBody {
+    width: 80vw;
+    min-height: 80vh;
+  }
+  .IconPerfilAndName {
+    padding: 10px 10px;
+    flex-direction: column;
+  }
+  .IconPerfilAndName img {
+    height: 100px;
+  }
+  .IconPerfilAndName input {
+    height: 50px;
+    width: 65%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .ProfileBody {
+    width: auto;
+    height: auto;
+  }
+  .IconPerfilAndName {
+    padding: 10px 10px;
+    flex-direction: column;
+  }
+  .IconPerfilAndName img {
+    height: 100px;
+  }
+  .IconPerfilAndName input {
+    height: 40px;
+    width: 99%;
+    font-size: 25px;
+  }
+}
