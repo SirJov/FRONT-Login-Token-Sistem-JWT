@@ -28,8 +28,6 @@
   color: rgb(13, 77, 24);
   font-weight: bold;
   font-size: 20px;
-  -webkit-text-stroke: 0.2px rgb(132, 179, 168);
-  text-shadow: 2px 2px 3px rgb(88, 88, 88);
 }
 
 .headerPostFeed button {

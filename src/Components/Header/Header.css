@@ -11,7 +11,7 @@ header {
   height: 94px;
 }
 .LocalPage {
-  position: absolute;
+  position: fixed;
   background-color: rgb(206, 206, 206);
   left: 10px;
   top: 82px;
