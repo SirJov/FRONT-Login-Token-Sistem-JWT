@@ -12,6 +12,7 @@ import "./BodyAplication.css";
 
 import ContextUser from "../../Context/ContextUser";
 
+
 export default function BodyAplication() {
   const Token = localStorage.getItem("token");
 
@@ -19,6 +20,7 @@ export default function BodyAplication() {
   let userObj = JSON.parse(userString);
 
   const [UserData, SetUserData] = useContext(ContextUser);
+  
 
   function ifUser() {
     if (UserData) {

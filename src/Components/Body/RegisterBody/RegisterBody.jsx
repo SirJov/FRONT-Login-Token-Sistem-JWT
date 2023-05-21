@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./RegisterBody.css";
 import axios from "axios";
 import ContextToken from "../../../Context/ContextToken";
+import ContextError from "../../../Context/ContextError";
 
 export default function RegisterBody() {
   const [User, setUser] = useState();
@@ -11,6 +12,7 @@ export default function RegisterBody() {
 
   const [dataRegister, setDataRegister] = useState();
   const [TokenUser, SetTokenUser] = useContext(ContextToken);
+  const [ErrorData, SetErrorData] = useContext(ContextError);
 
   const navigate = useNavigate();
 
@@ -25,11 +27,15 @@ export default function RegisterBody() {
   };
 
   useEffect(() => {
-    setDataRegister({
-      user: User,
-      email: Email,
-      password: Password,
-    });
+    
+      setDataRegister({
+        user: User,
+        email: Email,
+        password: Password,
+      });
+    
+      return SetErrorData("Preencha todos os campos!");
+    
   }, [User, Email, Password]);
 
   const ReqRegister = async (event) => {

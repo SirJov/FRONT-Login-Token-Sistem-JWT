@@ -6,26 +6,14 @@ import "./DisplayMsg.css";
 export default function Header() {
   const [ErrorData, SetErrorData] = useContext(ContextError);
   const [clas, setClas] = useState("DisplayMsgIdle");
-
-  function Mostrar() {
-    setClas("DisplayMsg");
-    setTimeout(() => {
-      setClas("DisplayMsg1");
-    }, 4000);
-  }
-  function Esconder() {
-    setClas("DisplayMsg2");
-    setTimeout(() => {
-      setClas("DisplayMsgIdle");
-    }, 8000);
-  }
-
   useEffect(() => {
-    console.log("eeee");
-    if (ErrorData === undefined) {
+    if (ErrorData === undefined || ErrorData === "") {
       return;
     } else {
       setClas("DisplayMsg2");
+      setTimeout(() => {
+        SetErrorData("");
+      }, 7000);
     }
   }, [ErrorData]);
 
