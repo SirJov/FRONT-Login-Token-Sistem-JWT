@@ -8,9 +8,39 @@ header {
   align-items: center;
   padding: 0px 20px;
   z-index: 2;
+  height: 94px;
 }
-@media (max-width: 420px) {
+.LocalPage {
+  position: absolute;
+  background-color: rgb(206, 206, 206);
+  left: 10px;
+  top: 82px;
+  z-index: 3;
+  border-radius: 5px;
+  border: 2px solid rgb(104, 105, 104);
+  box-shadow: 3px 3px 3px rgb(88, 88, 88);
+  height: 25px;
+  font-size: 12;
+  padding: 0px 3px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 71px;
+  }
+  .LocalPage {
+    left: 10px;
+    top: 58px;
+  }
+}
+@media (max-width: 767px) {
   header {
     padding: 0px 5px;
+    height: 65px;
+  }
+  .LocalPage {
+    left: 10px;
+    top: 58px;
+    height: 20px;
+    font-size: 13px;
   }
 }

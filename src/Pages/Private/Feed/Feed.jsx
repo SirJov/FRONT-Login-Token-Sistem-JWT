@@ -5,14 +5,17 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ContextUser from "../../../Context/ContextUser";
 import ContextError from "../../../Context/ContextError";
+import ContextPagSelected from "../../../Context/ContextPagSelected";
 
 export default function Feed() {
   const navigate = useNavigate();
   const [tokenUser, SetTokenUser] = useContext(ContextUser);
   const [feedData, SetFeedData] = useState(Array);
   const [ErrorData, SetUErrorData] = useContext(ContextError);
+  const [PagSelected, SetPagSelected] = useContext(ContextPagSelected);
 
   useEffect(() => {
+    SetPagSelected("Feed");
     const token = localStorage.getItem("token");
     const config = { headers: { Authorization: `Bearer ${token}` } };
 
