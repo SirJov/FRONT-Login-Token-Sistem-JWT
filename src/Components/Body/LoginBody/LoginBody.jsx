@@ -82,7 +82,7 @@ export default function LoguinBody() {
           required
         ></input>
         <input
-          type="text"
+          type="password"
           placeholder="Sua Senha"
           onChange={PasswordLogin}
           required
