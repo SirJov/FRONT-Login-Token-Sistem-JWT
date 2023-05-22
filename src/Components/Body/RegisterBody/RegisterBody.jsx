@@ -27,41 +27,41 @@ export default function RegisterBody() {
   };
 
   useEffect(() => {
-    
-      setDataRegister({
-        user: User,
-        email: Email,
-        password: Password,
-      });
-    
-      return SetErrorData("Preencha todos os campos!");
-    
+    setDataRegister({
+      user: User,
+      email: Email,
+      password: Password,
+    });
   }, [User, Email, Password]);
 
   const ReqRegister = async (event) => {
-    event.preventDefault();
+    if (dataRegister.user && dataRegister.email && dataRegister.password) {
+      event.preventDefault();
+      await axios
+        .post(
+          "https://api-login-token-sistem-jwt.vercel.app/RegisterUser",
+          dataRegister
+        )
+        .then((response) => {
+          localStorage.setItem("userData", JSON.stringify(response.data[1]));
 
-    await axios
-      .post(
-        "https://api-login-token-sistem-jwt.vercel.app/RegisterUser",
-        dataRegister
-      )
-      .then((response) => {
-        localStorage.setItem("userData", JSON.stringify(response.data[1]));
+          localStorage.setItem("token", response.data[0].token);
+          SetTokenUser(response.data[0].token);
 
-        localStorage.setItem("token", response.data[0].token);
-        SetTokenUser(response.data[0].token);
+          let userString = localStorage.getItem("userData");
+          let userObj = JSON.parse(userString);
 
-        let userString = localStorage.getItem("userData");
-        let userObj = JSON.parse(userString);
-
-        return navigate(`/`);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    //Post para Register
+          return navigate(`/`);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+    if (!dataRegister.user || !dataRegister.email || !dataRegister.password) {
+      return SetErrorData("Preencha todos os campos!");
+    }
   };
+
   const styled = (
     <style>{`
     .btnEntrar {
