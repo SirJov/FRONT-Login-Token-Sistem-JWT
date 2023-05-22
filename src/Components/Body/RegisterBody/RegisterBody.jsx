@@ -4,6 +4,7 @@ import "./RegisterBody.css";
 import axios from "axios";
 import ContextToken from "../../../Context/ContextToken";
 import ContextError from "../../../Context/ContextError";
+import ContextUser from "../../../Context/ContextUser";
 
 export default function RegisterBody() {
   const [User, setUser] = useState();
@@ -13,6 +14,7 @@ export default function RegisterBody() {
   const [dataRegister, setDataRegister] = useState();
   const [TokenUser, SetTokenUser] = useContext(ContextToken);
   const [ErrorData, SetErrorData] = useContext(ContextError);
+  const [UserData, SetUserData] = useContext(ContextUser);
 
   const navigate = useNavigate();
 
@@ -44,8 +46,9 @@ export default function RegisterBody() {
         )
         .then((response) => {
           localStorage.setItem("userData", JSON.stringify(response.data[1]));
-
           localStorage.setItem("token", response.data[0].token);
+          SetUserData(response.data[1]);
+
           SetTokenUser(response.data[0].token);
 
           let userString = localStorage.getItem("userData");

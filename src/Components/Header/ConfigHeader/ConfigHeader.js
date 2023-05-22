@@ -14,7 +14,6 @@ export default function ConfigHeader() {
   const [UserData] = useContext(ContextUser);
   const [url, SetUrl] = useState();
 
-  
   if (TokenUser) {
     if (UserData) {
       return (
