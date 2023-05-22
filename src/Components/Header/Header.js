@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import LogoHeader from "./LogoHeader/LogoHeader";
 import DetalDivHeader from "./DetailDivHeader/DetailDivHeader";
@@ -10,6 +10,7 @@ import ContextPagSelected from "../../Context/ContextPagSelected";
 import "./Header.css";
 export default function Header() {
   const [PagSelected] = useContext(ContextPagSelected);
+
   return (
     <>
       <div className="LocalPage">

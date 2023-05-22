@@ -22,10 +22,8 @@
   box-shadow: 0px 0px 10px rgb(78, 85, 82);
 }
 .SectionPostFeed p {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
-  color: rgb(13, 77, 24);
-  -webkit-text-stroke: 0.4px rgb(127, 187, 142);
 }
 
 .BtnTopRefrech {
