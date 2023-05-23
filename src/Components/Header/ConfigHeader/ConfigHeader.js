@@ -12,7 +12,6 @@ import ContextUser from "../../../Context/ContextUser";
 export default function ConfigHeader() {
   const [TokenUser] = useContext(ContextToken);
   const [UserData] = useContext(ContextUser);
-  const [url, SetUrl] = useState();
 
   if (TokenUser) {
     if (UserData) {
