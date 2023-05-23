@@ -65,15 +65,17 @@ export default function MenuHeader() {
             </Link>
           </li>
           <li>
-            <Link className="linkNav" to={`${ifUser()}/Feed`}>
-              <p>Feed</p>
-            </Link>
-          </li>
-          <li>
             <Link className="linkNav" to={`${ifUser()}/Profile`}>
               <p>Perfil</p>
             </Link>
           </li>
+
+          <li>
+            <Link className="linkNav" to={`${ifUser()}/Feed`}>
+              <p>Feed</p>
+            </Link>
+          </li>
+
           <li onClick={Logout}>
             <p>Desconectar</p>
           </li>
