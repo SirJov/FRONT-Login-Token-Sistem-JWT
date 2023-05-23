@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import "./Home.css";
 
 import HomeBody from "../../Components/Body/HomeBody/HomeBody";
 import ContextPagSelected from "../../Context/ContextPagSelected";

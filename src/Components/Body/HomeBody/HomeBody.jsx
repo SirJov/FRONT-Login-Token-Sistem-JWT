@@ -20,7 +20,8 @@ const TextNodejs =
   "Back-end do projeto criado em Nodejs. Usufruindo do javascrypt tanto no front-end como no back-end ";
 const TextApi =
   "API Rest em node utilizando JSON WebToken, Bcrypt-Generator, Express e Mongoose. Tambem com deploy feito na Vercel.";
-const TextDB = "aaaa";
+const TextDB =
+  "Dados sendo salvos no MongoDB, banco de dados não-relacional orientado a documentos.";
 
 export default function HomeBody() {
   return (
