@@ -10,18 +10,15 @@ const {
 export default function ProfileBody() {
   const [imgUserState, SetImgUserState] = useState(ArrayImgs[0].img);
   const [UserData] = useContext(ContextUser);
-  const [namePlaceholder, setNamePlaceholder] = useState("");
   const [imgSelected, SetImgSelected] = useState("user_default");
 
   const [newUserName, SetNewUserName] = useState("");
 
   useEffect(() => {
     if (UserData) {
-      return setNamePlaceholder(UserData.user);
     } else {
       let userString = localStorage.getItem("userData");
       let userObj = JSON.parse(userString);
-      return setNamePlaceholder(userObj.user);
     }
   }, [UserData]);
   useEffect(() => {
@@ -40,8 +37,8 @@ export default function ProfileBody() {
   return (
     <div className="ProfileBody">
       <div className="IconPerfilAndName">
-        <img  src={imgUserState} />
-        <input placeholder={namePlaceholder} onChange={getValueInput} />
+        <img src={imgUserState} />
+        <input placeholder={"Add novo nome"} onChange={getValueInput} />
       </div>
       <ImgOptions
         imgSelected={imgSelected}

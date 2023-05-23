@@ -2,6 +2,9 @@ import CardsHome from "./CardsHome/CardsHome";
 
 import "./HomeBody.css";
 
+import ImgLf from "../../../assets/ImgHome/Lf.png";
+import author from "../../../assets/ImgHome/author.png";
+
 import ImgNodejs from "../../../assets/ImgHome/ImgNodejs.png";
 import ImgApi from "../../../assets/ImgHome/ImgApi.png";
 import ImgDB from "../../../assets/ImgHome/ImgDB.png";
@@ -17,7 +20,7 @@ const TextFeed =
   "Poste sobre oque você quiser, curta e deixe comentários em postagens de outras pessoas 👨‍💻";
 
 const TextNodejs =
-  "Back-end do projeto criado em Nodejs. Usufruindo do javascrypt tanto no front-end como no back-end ";
+  "Back-end do projeto criado em Nodejs. Usufruindo do javascrypt tanto no front-end quanto no back-end ";
 const TextApi =
   "API Rest em node utilizando JSON WebToken, Bcrypt-Generator, Express e Mongoose. Tambem com deploy feito na Vercel.";
 const TextDB =
@@ -26,7 +29,30 @@ const TextDB =
 export default function HomeBody() {
   return (
     <div className="HomeBody">
-      <div className="box2"></div>
+      <div className="boxHeaderHome">
+        <div>
+          <img src={author} />
+          <p className="pAuthor">Dev Herico L.</p>
+        </div>
+
+        <div className="TextHome">
+          <h1>Litle face</h1>
+          <p>
+            È um app que de forma simples demonstra o funcionamento basico de
+            uma "mini" rede social
+          </p>
+          <p>
+            App demonstrativo para meu Portifolio, demonstrando meus
+            conhecimentos e também fixando o aprendizado
+            sobre React-Hooks, Jeson-Wueb-Token, Mongo-Db, validações de token e
+            permissões, e a utilização do Context-Api.
+          </p>
+        </div>
+        <div>
+          {" "}
+          <img src={ImgLf} />
+        </div>
+      </div>
       <div className="box1">
         <div className="subbox1">
           <CardsHome img={ImgReact} text={TextReact} />

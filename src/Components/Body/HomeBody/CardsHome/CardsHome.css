@@ -57,10 +57,10 @@
     font-size: 16px;
   }
 }
-@media (max-width: 420px) {
+@media (min-width: 299px) and(max-width: 420px) {
   .cardsHome {
-    width: 98%;
-    height: 280px;
+    width: 90%;
+    height: auto;
   }
   .cardsHome img {
     height: 110px;
@@ -69,5 +69,14 @@
   .cardsHome p {
     padding: 10px 10px;
     font-size: 16px;
+  }
+}
+@media (max-width: 298px) {
+  .cardsHome {
+    width: auto;
+    height: auto;
+  }
+  .cardsHome img {
+    width: 95%;
   }
 }
