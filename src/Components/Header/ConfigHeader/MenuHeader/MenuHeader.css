@@ -87,7 +87,6 @@
 .navHeaderVisible li:hover {
   box-shadow: 3px 3px 2px rgb(78, 85, 82);
   cursor: pointer;
-  font-size: 19.7px;
 }
 .linkNav {
   color: black;
@@ -156,9 +155,7 @@
     font-size: 15px;
     width: 120px;
   }
-  .navHeaderVisible li:hover {
-    font-size: 14.7px;
-  }
+
   .iconMenuHeader div {
     height: 6px;
     width: 35px;
